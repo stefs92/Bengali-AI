@@ -36,17 +36,7 @@ We noticed the image has some similarities to the 94th grapheme root from the gl
 We believe the more we manually look at the images, the more we can improve our understanding of the Bengali language, which can ultimately help us form our model. 
 
 # Neural Network Model 
-We attack this problem by designing a deep convolutional neural network of the following form ...
-
-<img width="508" alt="history plot" src="https://user-images.githubusercontent.com/54907300/74779447-81bf5600-526b-11ea-9a31-45e220546967.png">
-
-# Next Steps
-
-We noticed the images we loaded have a large yellow cloud around the graphemes. To prevent the model from unnecessarily traning this yellow space, we hope to focus the model on just the blue-lined grapheme. 
-
-# Appendicies
-
-### Code
+We attack this problem by designing a deep convolutional neural network of the following form:
 
 ```markdown
 Syntax highlighted code block 
@@ -67,6 +57,20 @@ Syntax highlighted code block
 
 [Link](url) and ![Image](src)
 ```
+
+
+
+
+<img width="508" alt="history plot" src="https://user-images.githubusercontent.com/54907300/74779447-81bf5600-526b-11ea-9a31-45e220546967.png">
+
+# Next Steps
+
+We noticed the images we loaded have a large yellow cloud around the graphemes. To prevent the model from unnecessarily traning this yellow space, we hope to focus the model on just the blue-lined grapheme. 
+
+# Appendicies
+
+
+
 
 <!-- For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/). >
 
