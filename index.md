@@ -81,11 +81,6 @@ Based on the graph above, the model proves to have high accuracy and low loss va
 
 We noticed the images we loaded have a large yellow cloud around the graphemes. To prevent the model from unnecessarily traning this yellow space, we hope to focus the model on just the blue-lined grapheme. 
 
-# Appendicies
-
-
-
-
 <!-- For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/). >
 
 <!-- ### Jekyll Themes >
