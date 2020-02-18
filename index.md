@@ -45,6 +45,29 @@ X_train_full=train_df0.values.reshape(-1,heigth,width,1);
 X_train, X_valid = X_train_full[:-5000], X_train_full[-5000:]
 y_train_full = train_df_['grapheme_root'][:50210];
 y_train, y_valid = y_train_full[:-5000], y_train_full[-5000:]
+
+model = keras.models.Sequential([
+    keras.layers.MaxPooling2D(pool_size=2,input_shape=[heigth, width, 1]),
+    keras.layers.Conv2D(filters=8, kernel_size=7, activation='relu', padding="SAME"),
+    keras.layers.MaxPooling2D(pool_size=3),
+    keras.layers.Conv2D(filters=8, kernel_size=3, activation='relu', padding="SAME"),
+    keras.layers.Conv2D(filters=8, kernel_size=3, activation='relu', padding="SAME"),
+    keras.layers.MaxPooling2D(pool_size=2),
+    keras.layers.Conv2D(filters=8, kernel_size=3, activation='relu', padding="SAME"),
+    keras.layers.Conv2D(filters=8, kernel_size=3, activation='relu', padding="SAME"),
+    keras.layers.MaxPooling2D(pool_size=2),
+    keras.layers.Flatten(),
+    keras.layers.Dense(units=128, activation='relu'),
+    keras.layers.Dropout(0.5),
+    keras.layers.Dense(units=64, activation='relu'),
+    keras.layers.Dropout(0.5),
+    keras.layers.Dense(units=168, activation='softmax'),
+    
+model.compile(loss="sparse_categorical_crossentropy", optimizer="adam", metrics=["accuracy"])
+history = model.fit(X_train, y_train, epochs=15, validation_data=(X_valid, y_valid))
+])
+
+pd.DataFrame(history.history).plot(figsize=(8, 5))
 ```
 
 
