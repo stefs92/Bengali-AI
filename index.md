@@ -75,6 +75,8 @@ pd.DataFrame(history.history).plot(figsize=(8, 5))
 
 <img width="508" alt="history plot" src="https://user-images.githubusercontent.com/54907300/74779447-81bf5600-526b-11ea-9a31-45e220546967.png">
 
+Based on the graph above, the model proves to have high accuracy and low loss values.
+
 # Next Steps
 
 We noticed the images we loaded have a large yellow cloud around the graphemes. To prevent the model from unnecessarily traning this yellow space, we hope to focus the model on just the blue-lined grapheme. 
