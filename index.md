@@ -18,7 +18,7 @@ At a high level, we wish to break down a Bengali word and assign the pieces to t
 
 We anticipate the task to be similar to the renowned image classification problem from the MNIST dataset, where 
 
-Inspiration from MNIST...
+<img width="575" alt="Screen Shot 2020-02-18 at 1 47 18 AM" src="https://user-images.githubusercontent.com/54907300/74720496-e941bb00-5203-11ea-9626-bfdd9d10ecb4.png">
 
 
 # Neural Network Model 
