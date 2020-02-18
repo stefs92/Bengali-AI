@@ -8,8 +8,10 @@
 
 # Bengali Grapheme Classification: Assessing the Challenge
 
+# Introduction
 While being spoken by more than 200 milion people, Bengali language is particulary interesting from the point of view of AI handwritten recognition. Each bengali letter consists of 3 parts -one of 168 possible grapheme roots, one of 11 possible vowel diacritics and one of 7 possible consonant diacritics. The sheer number of combinations makes handwritten symbol recognition a challenging machine learning problem.
 
+# Neural Network Model 
 We attack this problem by designing a deep convolutional neural network of the following form ...
 
 
