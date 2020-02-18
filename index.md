@@ -13,12 +13,18 @@
 While being spoken by more than 200 milion people, Bengali language is particulary interesting from the point of view of AI handwritten recognition. Each bengali letter consists of 3 parts -one of 168 possible grapheme roots, one of 11 possible vowel diacritics and one of 7 possible consonant diacritics. The sheer number of combinations makes handwritten symbol recognition a challenging machine learning problem.
 
 
-At a high level, we wish to break down a Bengali word and assign the pieces to three bins, shown below:
+At a high level, we wish to break down an image of a Bengali word and assign the pieces to three bins:
 <img width="647" alt="high_level_picture" src="https://user-images.githubusercontent.com/54907300/74720359-abdd2d80-5203-11ea-90a5-734785bae48b.png">
 
-Although it's a steep task, our team is prepared and has prior experience with image classification problems, working with the renowned MNIST Dataset (shown below), where numbers are organized by different fonts:
+Although it's a steep task, our team is prepared and has prior experience with image classification, working with the renowned MNIST Dataset (shown below) to organize numbers by different fonts:
 
 <img width="575" alt="Screen Shot 2020-02-18 at 1 47 18 AM" src="https://user-images.githubusercontent.com/54907300/74720496-e941bb00-5203-11ea-9626-bfdd9d10ecb4.png">
+
+# Data
+
+There are approximately 10,000 grapheme images to work with. 
+
+
 
 
 # Neural Network Model 
