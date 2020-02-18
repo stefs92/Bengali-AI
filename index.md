@@ -38,6 +38,8 @@ We believe the more we manually look at the images, the more we can improve our 
 # Neural Network Model 
 We attack this problem by designing a deep convolutional neural network of the following form ...
 
+<img width="508" alt="history plot" src="https://user-images.githubusercontent.com/54907300/74779447-81bf5600-526b-11ea-9a31-45e220546967.png">
+
 # Next Steps
 
 We noticed the images we loaded have a large yellow cloud around the graphemes. To prevent the model from unnecessarily traning this yellow space, we hope to focus the model on just the blue-lined grapheme. 
