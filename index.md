@@ -39,23 +39,12 @@ We believe the more we manually look at the images, the more we can improve our 
 We attack this problem by designing a deep convolutional neural network of the following form:
 
 ```markdown
-Syntax highlighted code block 
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-
-
-[Link](url) and ![Image](src)
+heigth = 137;
+width = 236;
+X_train_full=train_df0.values.reshape(-1,heigth,width,1);
+X_train, X_valid = X_train_full[:-5000], X_train_full[-5000:]
+y_train_full = train_df_['grapheme_root'][:50210];
+y_train, y_valid = y_train_full[:-5000], y_train_full[-5000:]
 ```
 
 
