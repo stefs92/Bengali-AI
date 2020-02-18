@@ -13,7 +13,7 @@
 While being spoken by more than 200 milion people, Bengali language is particulary interesting from the point of view of AI handwritten recognition. Each bengali letter consists of 3 parts -one of 168 possible grapheme roots, one of 11 possible vowel diacritics and one of 7 possible consonant diacritics. The sheer number of combinations makes handwritten symbol recognition a challenging machine learning problem.
 
 At a high level, we are tasked to break down a Bengali word and assign its pieces into 3 bins, shown below:
-![Alt text](/relative/path/to/high_level_picture.png?raw=true "Optional Title")
+![Alt text](http://full/path/to/high_level_picture.jpg "Optional title")
 
 
 Inspiration from MNIST...
