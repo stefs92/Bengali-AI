@@ -14,10 +14,10 @@ While being spoken by more than 200 milion people, Bengali language is particula
 # Neural Network Model 
 We attack this problem by designing a deep convolutional neural network of the following form ...
 
-
+# Appendicies
 ### Code
 
-<!-- Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for >
+Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for 
 
 ```markdown
 Syntax highlighted code block 
