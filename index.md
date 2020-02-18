@@ -22,7 +22,7 @@ Although it's a steep task, our team is prepared and has prior experience with i
 
 # Data
 
-There are approximately 10,000 grapheme images to work with. 
+There are approximately 10,000 grapheme images to work with. We will mostly be using the .parquet train and test files, each of which contains tens of thousands of images (size 137 x 236). Each row represents an image, and when looking at one of the test files
 
 
 
