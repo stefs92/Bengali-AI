@@ -6,6 +6,9 @@
 
 <!-- Hey guys, I commented out some lines with this command, I guess this is GitHub's way of commenting -->
 
+# Quantum AI 
+## Stefan Stanojevic - Giulio Salvatori - Kevin Qualls
+
 # Bengali Grapheme Classification: Assessing the Challenge
 
 # Introduction
