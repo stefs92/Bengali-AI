@@ -16,7 +16,7 @@ While being spoken by more than 200 milion people, Bengali language is particula
 At a high level, we wish to break down a Bengali word and assign the pieces to three bins, shown below:
 <img width="647" alt="high_level_picture" src="https://user-images.githubusercontent.com/54907300/74720359-abdd2d80-5203-11ea-90a5-734785bae48b.png">
 
-We anticipate the task to be similar to the renowned image classification problem from the MNIST dataset, where 
+Although it's a steep task, our team is prepared and has prior experience with image classification problems, working with the renowned MNIST Dataset (shown below), where numbers are organized by different fonts:
 
 <img width="575" alt="Screen Shot 2020-02-18 at 1 47 18 AM" src="https://user-images.githubusercontent.com/54907300/74720496-e941bb00-5203-11ea-9626-bfdd9d10ecb4.png">
 
