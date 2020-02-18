@@ -24,8 +24,13 @@ Although it's a steep task, our team is prepared and has prior experience with i
 
 There are approximately 10,000 grapheme images to work with. 
 
-We will mostly be using the .parquet train and test files, each of which contains tens of thousands of images (size 137 x 236). Each row represents an image, and when looking at one of the test files
+We will mostly be using the .parquet train and test files, each of which contains tens of thousands of images (size 137 x 236). Each row represents an image, and we plotted one row as a test:
 
+<img width="329" alt="map_94" src="https://user-images.githubusercontent.com/54907300/74727346-04fe8e80-520f-11ea-9693-86e82d1ed432.png">
+
+This image looks similar to the 94th grapheme root, in the table below:
+
+<img width="436" alt="Screen Shot 2020-02-18 at 5 26 45 AM" src="https://user-images.githubusercontent.com/54907300/74727573-6292db00-520f-11ea-8242-8b36604e1408.png">
 
 
 
