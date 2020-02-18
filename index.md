@@ -7,6 +7,7 @@
 <!-- Hey guys, I commented out some lines with this command, I guess this is GitHub's way of commenting -->
 
 # Bengali Grapheme Classification: Assessing the Challenge
+### Quantum AI
 ### Blog Post 1  -  Feb. 18, 2020
 
 # Introduction
