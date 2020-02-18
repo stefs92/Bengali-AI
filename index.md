@@ -29,13 +29,11 @@ We will mostly be using the .parquet train and test files, each of which contain
 <img width="436" alt="Screen Shot 2020-02-18 at 5 26 45 AM" src="https://user-images.githubusercontent.com/54907300/74727573-6292db00-520f-11ea-8242-8b36604e1408.png">
 
 
-From a shear eye-ball test, this image looks similar to the 94th grapheme root, in the table below:
+This image looks somewhat similar to the 94th grapheme root, in the table below:
 
 <img width="329" alt="map_94" src="https://user-images.githubusercontent.com/54907300/74727346-04fe8e80-520f-11ea-9693-86e82d1ed432.png">
 
-However
-
-
+Of course the eye-ball test is not sufficient, however our team feels it will help our machine learning model if we manually look at the images to get a feel for the Bengali language. 
 
 # Neural Network Model 
 We attack this problem by designing a deep convolutional neural network of the following form ...
