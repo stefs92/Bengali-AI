@@ -20,9 +20,11 @@ Although it's a steep task, our team is prepared and has prior experience with i
 
 <img width="575" alt="Screen Shot 2020-02-18 at 1 47 18 AM" src="https://user-images.githubusercontent.com/54907300/74720496-e941bb00-5203-11ea-9626-bfdd9d10ecb4.png">
 
-# Data
+# Loading the Data
 
-There are approximately 10,000 grapheme images to work with. We will mostly be using the .parquet train and test files, each of which contains tens of thousands of images (size 137 x 236). Each row represents an image, and when looking at one of the test files
+There are approximately 10,000 grapheme images to work with. 
+
+We will mostly be using the .parquet train and test files, each of which contains tens of thousands of images (size 137 x 236). Each row represents an image, and when looking at one of the test files
 
 
 
