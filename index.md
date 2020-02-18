@@ -29,14 +29,18 @@ We will mostly be using the .parquet train and test files, each of which contain
 <img width="436" alt="Screen Shot 2020-02-18 at 5 26 45 AM" src="https://user-images.githubusercontent.com/54907300/74727573-6292db00-520f-11ea-8242-8b36604e1408.png">
 
 
-This image looks somewhat similar to the 94th grapheme root, in the table below:
+We noticed the image has some similarities to the 94th grapheme root from the glossary:
 
 <img width="329" alt="map_94" src="https://user-images.githubusercontent.com/54907300/74727346-04fe8e80-520f-11ea-9693-86e82d1ed432.png">
 
-Of course the eye-ball test is not sufficient, however our team feels it will help our machine learning model if we manually look at the images to get a feel for the Bengali language. 
+We believe the more we manually look at the images, the more we can improve our understanding of the Bengali language, which can ultimately help us form our model. 
 
 # Neural Network Model 
 We attack this problem by designing a deep convolutional neural network of the following form ...
+
+# Next Steps
+
+We noticed the images we loaded have a large yellow cloud around the graphemes. To prevent the model from unnecessarily traning this yellow space, we hope to focus the model on just the blue-lined grapheme. 
 
 # Appendicies
 
