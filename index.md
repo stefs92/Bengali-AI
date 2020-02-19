@@ -81,7 +81,9 @@ Based on the graph above, the model proves to have high accuracy and low loss va
 
 We noticed the images we loaded have a large yellow cloud around the graphemes. To prevent the model from unnecessarily traning this yellow space, we hope to focus the model on just the blue-lined grapheme. This would involve looking at bounding boxes for our images. Cropping to the union of bounding boxes for all images would be a safe bet but might still result in unnecessarily large image size - therefore, we might want to restrict to a box size large enough to cover (100 - p)% of the images where p is a small parameter that can be tuned to increase accuracy.
 
-We can also experiment with different possible ways of training the network. The full dataset seems to large for Keras to handle simultaneously, so 
+We can also experiment with different possible ways of training the network. The full dataset seems to large for Keras to handle simultaneously, so the way to train seems to be to split it into 4 pieces and train on each one separately for some number_of_epochs. It is possible that accuracy would increase if we reduce number_of_epochs and then repat the process many times - this way, the neural network would have a chance to look at the entire dataset before getting really good at predicting its subsets.
+
+
 
 <!-- For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/). >
 
