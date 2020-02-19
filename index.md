@@ -83,8 +83,9 @@ We then started training the network on a portion of the available training data
 
 By a few trial and errors we have figured out a good initial set of hyperparameters (pooling sized and number of filters) for our neural network, obtaining a validation accuracy of 41% after 50 epochs of training. Considering that we have 168 classes, we can see that a random guessing would give an accuracy of approximately 0.5% instead. We used TensorBoard to visualize the training process. Here's a snapshot of the validation accuracy as a function of the number of epochs.
 
+<p align="center">
 <img width="363" alt="Epoch Loss" src="https://user-images.githubusercontent.com/54907300/74802425-d7195880-52a7-11ea-85c6-5945801f6c0d.png">
-
+</p>
 
 # Next Steps
 
@@ -96,7 +97,9 @@ We can also experiment with different possible ways of training the network. The
 
 Most importantly, we will experiment more with different neural network architectures and look for inspiration within the publicly available high-grade convolutional neural networks, and from the rich body of literature available on this topic. When faced with the problem of designing an efficient neural network architecture, one's first instinct is to add more layers. However, this leads to two issues that are really two sides of the same coin - increased computational complexity of training and overfitting. As noted in the famous ResNet paper, it is even common for training accuracy of overly deep models to decrease, a problem beyond overfitting. Their proposed solution is to add an identity function to the output of blocks of layers in their neural network, like in the below figure taken from the paper.
 
+<p align="center">
 <img width="280" alt="relu" src="https://user-images.githubusercontent.com/54907300/74802429-d84a8580-52a7-11ea-8cdc-dd00f6a806af.png">
+</p>
 
 The idea is to allow deeper neural networks to more easily approximate shallower ones - in order for above block to "disappear", it is enough to set all weights and biases in the above block. If we choose to make our network particularly deep, we would like to incorporate this kind of structures to help with training.
 
