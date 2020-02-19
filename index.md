@@ -77,9 +77,9 @@ We then started training the network on a portion of the available training data
 By a few trial and errors we have figured out a good initial set of hyperparameters (pooling sized and number of filters) for our neural network, obtaining a validation accuracy of 28% after 30 epochs of training. Considering that we have 168 classes, we can see that a random guessing would give an accuracy of approximately 0.5% instead.
 
 
-
-
 # Next Steps
+
+While so far we have only tackled the problem of grapheme recognition, we would like to 
 
 We noticed the images we loaded have a large yellow cloud around the graphemes. To prevent the model from unnecessarily traning this yellow space, we hope to focus the model on just the blue-lined grapheme. This would involve looking at bounding boxes for our images. Cropping to the union of bounding boxes for all images would be a safe bet but might still result in unnecessarily large image size - therefore, we might want to restrict to a box size large enough to cover (100 - p)% of the images where p is a small parameter that can be tuned to increase accuracy.
 
@@ -91,12 +91,18 @@ Most importantly, we will experiment more with different neural network architec
 <img width="575" alt="The building block of ResNet architecture" src="https://github.com/stefs92/Bengali-AI/blob/master/residual.PNG">
 </p>
 
-The idea is to allow deeper neural networks to more easily approximate shallower ones - in order for above block to "disappear", it is enough to set all weights and biases in the above block.
+The idea is to allow deeper neural networks to more easily approximate shallower ones - in order for above block to "disappear", it is enough to set all weights and biases in the above block. If we choose to make our network particularly deep, we would like to incorporate this kind of structures to help with training.
+
+Finally, while ideally we would like to take a shot at designing our own neural network from scratch, we can also try to apply transfer learning - take examples of public source high - performing convolutional neural networks from the internet, and retrain the last couple of layers to adapt them to our task.
+
+# References
+
+[1] He, K., Zhang, X., Ren, S., & Sun, J. (2016). Deep Residual Learning for Image Recognition. 2016 IEEE Conference on Computer Vision and Pattern Recognition (CVPR). doi: 10.1109/cvpr.2016.90
 
 <!-- For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/). >
 
 <!-- ### Jekyll Themes >
-
+ 
 <!-- Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/stefs92/Bengali-AI/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file. >
 
 <!-- ### Support or Contact >
