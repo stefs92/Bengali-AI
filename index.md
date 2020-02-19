@@ -18,7 +18,9 @@ At a high level, we wish to break down an image of a Bengali word and assign the
  
 Although it's a steep task, our team is prepared and has prior experience with image classification that could be helpful, such as working with the renowned MNIST Dataset (shown below) to organize numbers by different fonts:
 
+<p align="center">
 <img width="575" alt="Screen Shot 2020-02-18 at 1 47 18 AM" src="https://user-images.githubusercontent.com/54907300/74720496-e941bb00-5203-11ea-9626-bfdd9d10ecb4.png">
+ </p>
 
 # Examining the Data
 
@@ -31,7 +33,9 @@ We will mostly be using the .parquet train and test files, each of which contain
 
 We noticed the image has some similarities to the 94th grapheme root from the glossary:
 
+<p align="center">
 <img width="329" alt="map_94" src="https://user-images.githubusercontent.com/54907300/74727346-04fe8e80-520f-11ea-9693-86e82d1ed432.png">
+ </p>
 
 We believe the more we manually look at the images, the more we can improve our understanding of the Bengali language, which can ultimately help us form our model. 
 
