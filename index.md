@@ -83,9 +83,6 @@ We then started training the network on a portion of the available training data
 
 By a few trial and errors we have figured out a good initial set of hyperparameters (pooling sized and number of filters) for our neural network, obtaining a validation accuracy of 41% after 50 epochs of training. Considering that we have 168 classes, we can see that a random guessing would give an accuracy of approximately 0.5% instead. We used TensorBoard to visualize the training process. Here's a snapshot of the validation accuracy as a function of the number of epochs.
 
-<p align="center">
-<img width="363" alt="Epoch Loss" src="https://user-images.githubusercontent.com/54907300/74802425-d7195880-52a7-11ea-85c6-5945801f6c0d.png">
-</p>
 
 <p align="center">
 <img width="375" alt="accuracy" src="https://user-images.githubusercontent.com/54907300/74803236-26f91f00-52aa-11ea-85c4-f46c7275a226.png">
