@@ -74,8 +74,11 @@ model = keras.models.Sequential([
 
 We then started training the network on a portion of the available training data: the 50.000 images contained in the file train_image_data_0.parquet available at https://www.kaggle.com/c/bengaliai-cv19/data.
 
-By a few trial and errors we have figured out a good initial set of hyperparameters (pooling sized and number of filters) for our neural network, obtaining a validation accuracy of 28% after 30 epochs of training. Considering that we have 168 classes, we can see that a random guessing would give an accuracy of approximately 0.5% instead.
+By a few trial and errors we have figured out a good initial set of hyperparameters (pooling sized and number of filters) for our neural network, obtaining a validation accuracy of 28% after 30 epochs of training. Considering that we have 168 classes, we can see that a random guessing would give an accuracy of approximately 0.5% instead. We used TensorBoard to visualize the training process. Here's a snapshot of the validation accuracy as a function of the number of epochs.
 
+<p align="center">
+<img width="575" alt="The building block of ResNet architecture" src="https://github.com/stefs92/Bengali-AI/blob/master/accuracy.PNG">
+</p>
 
 # Next Steps
 
