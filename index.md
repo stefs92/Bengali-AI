@@ -24,7 +24,7 @@ Although it's a steep task, our team is prepared and has prior experience with i
 
 When loading the data, we see there are approximately 10,000 grapheme images to work with. 
 
-We will mostly be using the .parquet train and test files, each of which contains tens of thousands of images (each size 137 x 236). Each row represents an image, and we plotted one row as a trial run:
+We will mostly be using the .parquet train and test files, each of which contains tens of thousands of images (each size 137 x 236). They are easily loaded with the help from pandas package. Each row represents an image, and we plotted one row as a trial run:
 
 <img width="436" alt="Screen Shot 2020-02-18 at 5 26 45 AM" src="https://user-images.githubusercontent.com/54907300/74727573-6292db00-520f-11ea-8242-8b36604e1408.png">
 
@@ -83,7 +83,9 @@ We noticed the images we loaded have a large yellow cloud around the graphemes. 
 
 We can also experiment with different possible ways of training the network. The full dataset seems to large for Keras to handle simultaneously, so the way to train seems to be to split it into 4 pieces and train on each one separately for some number_of_epochs. It is possible that accuracy would increase if we reduce number_of_epochs and then repat the process many times - this way, the neural network would have a chance to look at the entire dataset before getting really good at predicting its subsets.
 
-Most importantly, we will experiment more with different neural network architectures and look for inspiration within the publicly available high-grade convolutional neural networks. 
+Most importantly, we will experiment more with different neural network architectures and look for inspiration within the publicly available high-grade convolutional neural networks, and from the rich body of literature available on this topic. When faced with the problem of designing an efficient neural network architecture, one's first instinct is to add more layers. However, this leads to two issues that are really two sides of the same coin - increased computational complexity of training and overfitting. As shown in the following graph from the famous ResNet paper, the accuracy of an average convolutonal neural network actually decreases after adding more layers.
+
+
 
 <!-- For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/). >
 
