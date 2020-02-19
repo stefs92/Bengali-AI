@@ -35,9 +35,9 @@ We noticed the image has some similarities to the 94th grapheme root from the gl
 
 We believe the more we manually look at the images, the more we can improve our understanding of the Bengali language, which can ultimately help us form our model. 
 
-# Neural Network Model: the Grapheme root
+# Neural Network Model: the Grapheme Root
 
-As an initial step, we decided to focus on a simpler problem: designe a Neural Network capable of recognizing the grapheme root. 
+As an initial step, we decided to focus on a simpler problem: to design a Neural Network capable of recognizing the grapheme root. 
 We choose to do so in order to quickly have a working model and begin to assess the difficulties of the task. Recognizing the grapheme root provides the most difficult step since it involves 168 different classes compared to the 7 and 11 of the diacritics components. 
 
 In addition, the model trained in recognizing the grapheme root can then be used to tackle the entire classification problem, for example by adding layers to the network which will be trained to recognise the diacritics.
@@ -71,9 +71,6 @@ model = keras.models.Sequential([
 ```
 
 
-
-
-<img width="508" alt="history plot" src="https://user-images.githubusercontent.com/54907300/74779447-81bf5600-526b-11ea-9a31-45e220546967.png">
 
 We then started training the network on a portion of the available training data: the 50.000 images contained in the file train_image_data_0.parquet available at https://www.kaggle.com/c/bengaliai-cv19/data.
 
