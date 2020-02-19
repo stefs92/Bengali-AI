@@ -102,7 +102,7 @@ Most importantly, we will experiment more with different neural network architec
 <img width="280" alt="relu" src="https://user-images.githubusercontent.com/54907300/74802429-d84a8580-52a7-11ea-8cdc-dd00f6a806af.png">
 </p>
 
-The idea is to allow deeper neural networks to more easily approximate shallower ones - in order for above block to "disappear", it is enough to set all weights and biases in the above block. If we choose to make our network particularly deep, we would like to incorporate this kind of structures to help with training.
+The idea is to allow deeper neural networks to more easily approximate shallower ones - in order for above block to "disappear", it is enough to set all weights and biases to zero in the above block. If we choose to make our network particularly deep, we would like to incorporate this kind of structures to help with training.
 
 Finally, while ideally we would like to take a shot at designing our own neural network from scratch, we can also try to apply transfer learning - take examples of public source high - performing convolutional neural networks from the internet, and retrain the last couple of layers to adapt them to our task.
 
