@@ -85,9 +85,7 @@ We can also experiment with different possible ways of training the network. The
 
 Most importantly, we will experiment more with different neural network architectures and look for inspiration within the publicly available high-grade convolutional neural networks, and from the rich body of literature available on this topic. When faced with the problem of designing an efficient neural network architecture, one's first instinct is to add more layers. However, this leads to two issues that are really two sides of the same coin - increased computational complexity of training and overfitting. As shown in the following graph from the famous ResNet paper, the accuracy of an average convolutonal neural network actually decreases after adding more layers.
 
-<!-- <img width="508" alt="history plot" src="https://user-images.githubusercontent.com/54907300/ResNet.png">
-
-!ls
+<img width="508" alt="ResNet" src="https://user-images.githubusercontent.com/31740043/ResNet.png">
 
 <!-- For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/). >
 
