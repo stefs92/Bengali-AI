@@ -35,16 +35,21 @@ We noticed the image has some similarities to the 94th grapheme root from the gl
 
 We believe the more we manually look at the images, the more we can improve our understanding of the Bengali language, which can ultimately help us form our model. 
 
-# Neural Network Model 
-We attack this problem by designing a deep convolutional neural network of the following form:
+# Neural Network Model: the Grapheme root
+
+As an initial step, we decided to focus on a simpler problem: designe a Neural Network capable of recognizing the grapheme root. 
+We choose to do so in order to quickly have a working model and begin to assess the difficulties of the task. Recognizing the grapheme root provides the most difficult step since it involves 168 different classes compared to the 7 and 11 of the diacritics components. 
+
+In addition, the model trained in recognizing the grapheme root can then be used to tackle the entire classification problem, for example by adding layers to the network which will be trained to recognise the diacritics.
+Having in mind that the diacritics are essentially decorations of the grapheme root, it seems reasonable that an effective neural network should work by first recognizing the root and consequently any extra addition to it. 
+
+
+We took as a starting point a simple convolutional neural network taken from from Geron's companion notebook to Chapter 14 of Hands-On Machine Learning, which we suitably tuned to our problem.
+
 
 ```markdown
 heigth = 137;
 width = 236;
-X_train_full=train_df0.values.reshape(-1,heigth,width,1);
-X_train, X_valid = X_train_full[:-5000], X_train_full[-5000:]
-y_train_full = train_df_['grapheme_root'][:50210];
-y_train, y_valid = y_train_full[:-5000], y_train_full[-5000:]
 
 model = keras.models.Sequential([
     keras.layers.MaxPooling2D(pool_size=2,input_shape=[heigth, width, 1]),
@@ -62,12 +67,7 @@ model = keras.models.Sequential([
     keras.layers.Dense(units=64, activation='relu'),
     keras.layers.Dropout(0.5),
     keras.layers.Dense(units=168, activation='softmax'),
-    
-model.compile(loss="sparse_categorical_crossentropy", optimizer="adam", metrics=["accuracy"])
-history = model.fit(X_train, y_train, epochs=15, validation_data=(X_valid, y_valid))
-])
-
-pd.DataFrame(history.history).plot(figsize=(8, 5))
+   
 ```
 
 
@@ -75,7 +75,12 @@ pd.DataFrame(history.history).plot(figsize=(8, 5))
 
 <img width="508" alt="history plot" src="https://user-images.githubusercontent.com/54907300/74779447-81bf5600-526b-11ea-9a31-45e220546967.png">
 
-Based on the graph above, the model proves to have high accuracy and low loss values.
+We then started training the network on a portion of the available training data: the 50.000 images contained in the file train_image_data_0.parquet available at https://www.kaggle.com/c/bengaliai-cv19/data.
+
+By a few trial and errors we have figured out a good initial set of hyperparameters (pooling sized and number of filters) for our neural network, obtaining a validation accuracy of 28% after 30 epochs of training. Considering that we have 168 classes, we can see that a random guessing would give an accuracy of approximately 0.5% instead.
+
+
+
 
 # Next Steps
 
@@ -83,7 +88,10 @@ We noticed the images we loaded have a large yellow cloud around the graphemes. 
 
 We can also experiment with different possible ways of training the network. The full dataset seems to large for Keras to handle simultaneously, so the way to train seems to be to split it into 4 pieces and train on each one separately for some number_of_epochs. It is possible that accuracy would increase if we reduce number_of_epochs and then repat the process many times - this way, the neural network would have a chance to look at the entire dataset before getting really good at predicting its subsets.
 
-Most importantly, we will experiment more with different neural network architectures and look for inspiration within the publicly available high-grade convolutional neural networks, and from the rich body of literature available on this topic. When faced with the problem of designing an efficient neural network architecture, one's first instinct is to add more layers. However, this leads to a range of issues including the increased computational complexity of training and overfitting - two issues that are really two sides of the same coin. As noted in the famous ResNet paper [1], it is even common for the training accuracy of the overly deep networks to start decreasing, an issue that goes beyond overfitting. ResNet architecture deals with this problem by learning to approximate "residuals" - differences by a simple gimmick shown in the following figure
+Most importantly, we will experiment more with different neural network architectures and look for inspiration within the publicly available high-grade convolutional neural networks, and from the rich body of literature available on this topic. When faced with the problem of designing an efficient neural network architecture, one's first instinct is to add more layers. However, this leads to two issues that are really two sides of the same coin - increased computational complexity of training and overfitting. As shown in the following graph from the famous ResNet paper, the accuracy of an average convolutonal neural network actually decreases after adding more layers.
+
+<img width="575" alt="Accuracy vs Complexity from ResNet paper" src="https://github.com/stefs92/Bengali-AI/blob/master/ResNet.PNG">
+
 
 <!-- For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/). >
 
