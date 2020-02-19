@@ -85,11 +85,13 @@ We noticed the images we loaded have a large yellow cloud around the graphemes. 
 
 We can also experiment with different possible ways of training the network. The full dataset seems to large for Keras to handle simultaneously, so the way to train seems to be to split it into 4 pieces and train on each one separately for some number_of_epochs. It is possible that accuracy would increase if we reduce number_of_epochs and then repat the process many times - this way, the neural network would have a chance to look at the entire dataset before getting really good at predicting its subsets.
 
-Most importantly, we will experiment more with different neural network architectures and look for inspiration within the publicly available high-grade convolutional neural networks, and from the rich body of literature available on this topic. When faced with the problem of designing an efficient neural network architecture, one's first instinct is to add more layers. However, this leads to two issues that are really two sides of the same coin - increased computational complexity of training and overfitting. As noted in the famous ResNet paper, it is even common for training accuracy of overly deep models to decrease, a problem beyond overfitting. Their proposed solution is to add an identity function to the output of blocks of layers in their neural network.
+Most importantly, we will experiment more with different neural network architectures and look for inspiration within the publicly available high-grade convolutional neural networks, and from the rich body of literature available on this topic. When faced with the problem of designing an efficient neural network architecture, one's first instinct is to add more layers. However, this leads to two issues that are really two sides of the same coin - increased computational complexity of training and overfitting. As noted in the famous ResNet paper, it is even common for training accuracy of overly deep models to decrease, a problem beyond overfitting. Their proposed solution is to add an identity function to the output of blocks of layers in their neural network, like in the below figure taken from the paper.
 
 <p align="center">
-<img width="575" alt="The building block of ResNet architecture ([1])" src="https://github.com/stefs92/Bengali-AI/blob/master/residual.PNG">
+<img width="575" alt="The building block of ResNet architecture" src="https://github.com/stefs92/Bengali-AI/blob/master/residual.PNG">
 </p>
+
+The idea is to allow deeper neural networks to more easily approximate shallower ones - in order for above block to "disappear", it is enough to set all weights and biases in the above block.
 
 <!-- For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/). >
 
