@@ -62,9 +62,9 @@ model = keras.models.Sequential([
     keras.layers.Conv2D(filters=8, kernel_size=3, activation='relu', padding="SAME"),
     keras.layers.MaxPooling2D(pool_size=2),
     keras.layers.Flatten(),
-    keras.layers.Dense(units=128, activation='relu'),
+    keras.layers.Dense(units=168, activation='relu'),
     keras.layers.Dropout(0.5),
-    keras.layers.Dense(units=64, activation='relu'),
+    keras.layers.Dense(units=168, activation='relu'),
     keras.layers.Dropout(0.5),
     keras.layers.Dense(units=168, activation='softmax'),
    
@@ -74,7 +74,7 @@ model = keras.models.Sequential([
 
 We then started training the network on a portion of the available training data: the 50.000 images contained in the file train_image_data_0.parquet available at https://www.kaggle.com/c/bengaliai-cv19/data.
 
-By a few trial and errors we have figured out a good initial set of hyperparameters (pooling sized and number of filters) for our neural network, obtaining a validation accuracy of 28% after 30 epochs of training. Considering that we have 168 classes, we can see that a random guessing would give an accuracy of approximately 0.5% instead. We used TensorBoard to visualize the training process. Here's a snapshot of the validation accuracy as a function of the number of epochs.
+By a few trial and errors we have figured out a good initial set of hyperparameters (pooling sized and number of filters) for our neural network, obtaining a validation accuracy of 41% after 50 epochs of training. Considering that we have 168 classes, we can see that a random guessing would give an accuracy of approximately 0.5% instead. We used TensorBoard to visualize the training process. Here's a snapshot of the validation accuracy as a function of the number of epochs.
 
 <p align="center">
 <img width="575" alt="The building block of ResNet architecture" src="https://github.com/stefs92/Bengali-AI/blob/master/accuracy.PNG">
@@ -82,11 +82,9 @@ By a few trial and errors we have figured out a good initial set of hyperparamet
 
 # Next Steps
 
-While so far we have only tackled the problem of grapheme recognition, we would like to 
-
 We noticed the images we loaded have a large yellow cloud around the graphemes. To prevent the model from unnecessarily traning this yellow space, we hope to focus the model on just the blue-lined grapheme. This would involve looking at bounding boxes for our images. Cropping to the union of bounding boxes for all images would be a safe bet but might still result in unnecessarily large image size - therefore, we might want to restrict to a box size large enough to cover (100 - p)% of the images where p is a small parameter that can be tuned to increase accuracy.
 
-We can also experiment with different possible ways of training the network. The full dataset seems to large for Keras to handle simultaneously, so the way to train seems to be to split it into 4 pieces and train on each one separately for some number_of_epochs. It is possible that accuracy would increase if we reduce number_of_epochs and then repat the process many times - this way, the neural network would have a chance to look at the entire dataset before getting really good at predicting its subsets.
+We can also experiment with different possible ways of training the network. The full dataset seems to large for Keras to handle simultaneously, so the way to train seems to be to split it into 4 pieces and train on each one separately for some number_of_epochs. It is possible that accuracy would increase if we reduce number_of_epochs and then repat the process many times - this way, the neural network would have a chance to look at the entire dataset before getting really good at predicting its subsets. We can also try to use an instance of the ImageDataGenerator class in order to load objects in real time while training.
 
 Most importantly, we will experiment more with different neural network architectures and look for inspiration within the publicly available high-grade convolutional neural networks, and from the rich body of literature available on this topic. When faced with the problem of designing an efficient neural network architecture, one's first instinct is to add more layers. However, this leads to two issues that are really two sides of the same coin - increased computational complexity of training and overfitting. As noted in the famous ResNet paper, it is even common for training accuracy of overly deep models to decrease, a problem beyond overfitting. Their proposed solution is to add an identity function to the output of blocks of layers in their neural network, like in the below figure taken from the paper.
 
