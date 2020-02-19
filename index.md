@@ -28,8 +28,9 @@ When loading the data, we see there are approximately 10,000 grapheme images to 
 
 We will mostly be using the .parquet train and test files, each of which contains tens of thousands of images (each size 137 x 236). They are easily loaded with the help from pandas package. Each row represents an image, and we plotted one row as a trial run:
 
+<p align="center">
 <img width="436" alt="Screen Shot 2020-02-18 at 5 26 45 AM" src="https://user-images.githubusercontent.com/54907300/74727573-6292db00-520f-11ea-8242-8b36604e1408.png">
-
+</p>
 
 We noticed the image has some similarities to the 94th grapheme root from the glossary:
 
