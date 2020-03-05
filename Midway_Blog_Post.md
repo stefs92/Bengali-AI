@@ -1,21 +1,24 @@
-# Bengali Grapheme Classification: Experimenting with Models
+# Bengali Grapheme Classification: Testing Different Approaches
 ### Midway Blog Post  -  Mar. 05, 2020
 
 # Introduction
 The....
 
 
-# Examining the Data
+# Approach 1: 
 
 The...
 
-# Neural Network Model: the Grapheme Root
+# Approach 2:
+
+The...
+
+# Appraoch 3: 
 
 The...
 
 # Next Steps
-
-The...
+The....
 
 # References
 
