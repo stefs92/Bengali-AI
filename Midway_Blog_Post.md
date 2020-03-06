@@ -8,6 +8,7 @@ In order to preprocess the data more efficiently, we have started using the Imag
 
 Since finishing our last blog post, we have realized that increasing the number of filters in convolutional layers can significantly improve the performance. We have also experimented with making our neural network deeper. Both changes resulted in significant overfitting. This is illustrated below, we can see the validation accuracy plateauing as the training accuracy is steadily improving.
 
+
 # Approach 1: 
 
 The...
