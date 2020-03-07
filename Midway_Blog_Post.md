@@ -16,6 +16,9 @@ Since finishing our last blog post, we have realized that increasing the number 
 
 We have attempted to regularize the model by introducing dropouts after max pooling layers. After adding a dropout of 0.5 after each max pooling layer, the model performed significantly worse, with accuracy hovering around 2.5% after 5 epochs - this value was too high. We tuned both the number of filters and the dropout parameter by training the model for several epochs and choosing the best - performing model. This gave us the validation accuracy of around 47% and the training is visualized in the Tensorboard's graph below
 
+<p align="center">
+<img width="400" alt="high_level_picture" src="https://user-images.githubusercontent.com/31740043/76132939-82821700-5fe3-11ea-90cb-9e39500aff20.PNG">
+</p>
 
 
 # Approach 2:
