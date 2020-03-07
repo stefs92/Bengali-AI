@@ -29,7 +29,6 @@ Here, we tried to regularize the neural net using the SpatialDropouts ...
 
 Here, we tried to regularize using L1 and L2 regularization ...
 
-<img width="506" alt="Screen Shot 2020-03-07 at 6 12 19 AM" src="https://user-images.githubusercontent.com/54907300/76142325-b63c5b80-603a-11ea-9b80-6ec9183454de.png">
 
 # Next Steps
 
