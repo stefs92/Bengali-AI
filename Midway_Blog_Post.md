@@ -23,13 +23,15 @@ We have attempted to regularize the model by introducing dropouts after max pool
 
 # Approach 2:
 
-Here, we tried to regularize the neural net using SpatialDropouts, a technique that drops 2D Feature maps. <sup>[1]</sup>
+Here, we tried to regularize the neural net using SpatialDropouts, a technique that drops 2D Feature maps. <sup>[1]</sup> The following block of code (from TensorFlow) is the standard of how the technique is implemented <sup>[1]</sup>:
 
 ```
 tf.keras.layers.SpatialDropout2D(
     rate, data_format=None, **kwargs
 )
 ```
+
+The "**kwargs"
 
 # Appraoch 3: 
 
