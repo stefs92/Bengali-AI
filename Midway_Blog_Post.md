@@ -43,7 +43,8 @@ Our final code had 23 layers (5 Convulution 2D, 3 Dense, 4 Dropout, 1 Flatten, 4
 
 After running our model for 30 epochs, we got small values for accuracy and validation accuracy, fluctating between 2.5% and 3%:
 
-<img width="517" alt="spatial dropout approach" src="https://user-images.githubusercontent.com/54907300/76157122-ac663700-60d2-11ea-9b7f-4ef61a264b17.png">
+
+<img width="352" alt="initial model" src="https://user-images.githubusercontent.com/54907300/76158482-936a7f80-60ec-11ea-97bf-363855f4539d.png"> <img width="499" alt="spatial dropout approach" src="https://user-images.githubusercontent.com/54907300/76158467-72a22a00-60ec-11ea-9028-eaf247832c72.png">
 
 Our initial model (from our initial blog post) had 15 layers (5 Convulution 2D, 3 Dense, 2 Dropout, 1 Flatten, 4 MaxPooling) and a 41% validation accuracy (after running for 50 epochs). However, after adding 8 layers to the new model (6 SpatialDropout2D, 2 Dropout), the model significantly decreases in accuracy (down to less than 3%, after running for 30 epochs). 
 
