@@ -12,7 +12,7 @@ Since finishing our last blog post, we have realized that increasing the number 
 <img width="400" alt="high_level_picture" src="https://user-images.githubusercontent.com/31740043/76132697-35ea0c00-5fe2-11ea-881e-02bda7e403ba.PNG">
 </p>
 
-# Approach 1: 
+# Approach 1: Dropouts
 
 We have attempted to regularize the model by introducing dropouts after max pooling layers. After adding a dropout of 0.5 after each max pooling layer, the model performed significantly worse, with accuracy hovering around 2.5% after 5 epochs - this value was too high. We tuned both the number of filters and the dropout parameter by training the model for several epochs and choosing the best - performing model. This gave us the validation accuracy of around 47% and the training is visualized in the Tensorboard's graph below (similar to value accuracy)
 
@@ -21,7 +21,7 @@ We have attempted to regularize the model by introducing dropouts after max pool
 </p>
 
 
-# Approach 2:
+# Approach 2: Spatial Dropouts with L1 and L2 Reglarizers
 
 For our second approach, we tried to regularize the neural net using SpatialDropouts, a technique that drops 2D Feature maps. <sup>[1]</sup> The following block of code (from TensorFlow) is the standard of how the technique is implemented <sup>[1]</sup>:
 
@@ -39,33 +39,33 @@ keras.layers.Conv2D(filters=25, kernel_size=2, activation='relu', padding="SAME"
 tf.keras.layers.SpatialDropout2D(rate = 0.2, data_format=None),
 ```
 
-Our final code had 23 layers (5 Convulution 2D, 3 Dense, 4 Dropout, 1 Flatten, 4 MaxPooling, 6 SpatialDropout2D). The Convultion Layers had filters set to 25, kernel sizes of 3, "relu" activation functions, "SAME" paddings, and regularizers set to 0.01 (3 L1 reglarizers and 2 L2 regularizers). The SpatialDropout2D layers had rates of 0.2, the MaxPooling2D layers had pool_sizes set to 2, and the Desnse layers had units of 168, kernel_initializers set to "glorot_normal", 2 activations set to "relu" and 1 set to "softmax" and regularizes set to 0.01 (1 L1 regularizer and 2 L2 regularizers).
+Our final code had 23 layers (5 Convolution 2D, 3 Dense, 4 Dropout, 1 Flatten, 4 MaxPooling, 6 SpatialDropout2D). The Convultion Layers had filters set to 25, kernel sizes of 3, "relu" activation functions, "SAME" paddings, and regularizers set to 0.01 (3 L1 reglarizers and 2 L2 regularizers). The SpatialDropout2D layers had rates of 0.2, the MaxPooling2D layers had pool_sizes set to 2, and the Desnse layers had units of 168, kernel_initializers set to "glorot_normal", 2 activations set to "relu" and 1 set to "softmax" and regularizes set to 0.01 (1 L1 regularizer and 2 L2 regularizers).
 
 After running our model for 30 epochs, we got small values for accuracy and validation accuracy, fluctating between 2.5% and 3%:
 
+<img width="499" alt="spatial dropout approach" src="https://user-images.githubusercontent.com/54907300/76158467-72a22a00-60ec-11ea-9028-eaf247832c72.png">
+
+The validation accuracy (and accuracy) drastically decreased from the 41% validation accuracy our initial model from our initial blog post had, shown below:
 
 <img width="352" alt="initial model" src="https://user-images.githubusercontent.com/54907300/76158482-936a7f80-60ec-11ea-97bf-363855f4539d.png"> 
 
+Our initial model had 15 layers (5 Convolution 2D, 3 Dense, 2 Dropout, 1 Flatten, 4 MaxPooling) and ran for 50 epochs, but adding 8 layers (6 SpatialDropout2D, 2 Dropout) caused the validation accuracy to plummet. Even though the model will perform poorly with this accuracy, at least we know it's not overfitted, since the accuracy and validation accuracy are within the same range (according to a user from StackOverFlow <sup>[2]</sup>).
 
-This is a drastic decrease, compared to our initial model (from our initial blog post):
+# Appraoch 3: Exclude Spatial Drop Outs, Keep Regularizers Consistent (L1)
 
-<img width="499" alt="spatial dropout approach" src="https://user-images.githubusercontent.com/54907300/76158467-72a22a00-60ec-11ea-9028-eaf247832c72.png">
+To see if the spatial drop outs and varied regularizers caused the huge decrease in accuracy, we decided to exclude the SpatialDropout2D layers and keep the regularizers consistent (L1). We used 17 layers - 5 Convolution 2D, 3 Dense, 4 Dropouts, 1 Flatten, 4 MaxPooling (we added 2 dropout layers). After running the model for 30 epochs, we surprisingly get the same accuracy and validation accuracy, less than 3%. 
 
-Our initial model had 15 layers (5 Convulution 2D, 3 Dense, 2 Dropout, 1 Flatten, 4 MaxPooling) and a 41% validation accuracy (after running for 50 epochs). However, after adding 8 layers to the new model (6 SpatialDropout2D, 2 Dropout), the model significantly decreases in accuracy (down to less than 3%, after running for 30 epochs). 
 
-Although it's not a professional source, one StackOverFlow user said that the model is not overfitted if the accuracy and validation accuaracy are within the same range <sup>[2]</sup>.
-
-# Appraoch 3: 
-
-Here, we tried to regularize using L1 and L2 regularization ...
 
 
 # Next Steps
  
 In the remainder of this project, we will try to experiment with more interesting architectures such as dilated convolutions, and perhaps resnets ...
 
+threshold how deep a nn is
 
 # References
 1. tf.keras.layers.SpatialDropout2D | TensorFlow Core v.2
 2. StackOverFlow | https://stackoverflow.com/questions/51335133/keras-how-come-accuracy-is-higher-than-val-acc
+                
 
