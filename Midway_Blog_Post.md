@@ -55,7 +55,7 @@ Here, we tried to regularize using L1 and L2 regularization ...
 
 
 # Next Steps
-
+ 
 In the remainder of this project, we will try to experiment with more interesting architectures such as dilated convolutions, and perhaps resnets ...
 
 
