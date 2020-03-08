@@ -1,4 +1,4 @@
-# Bengali Grapheme Classification
+# Bengali Grapheme Classification: Final Model
 ### Final Blog Post  -  Mar. 08, 2020
 
 # Introduction
