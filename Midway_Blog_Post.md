@@ -41,7 +41,9 @@ tf.keras.layers.SpatialDropout2D(rate = 0.2, data_format=None),
 
 Our final code had 23 layers (5 Convulution 2D, 3 Dense, 4 Dropout, 1 Flatten, 4 MaxPooling, 6 SpatialDropout2D). The Convultion Layers had filters set to 25, kernel sizes of 3, "relu" activation functions, "SAME" paddings, and regularizers set to 0.01 (3 L1 reglarizers and 2 L2 regularizers). The SpatialDropout2D layers had rates of 0.2, the MaxPooling2D layers had pool_sizes set to 2, and the Desnse layers had units of 168, kernel_initializers set to "glorot_normal", 2 activations set to "relu" and 1 set to "softmax" and regularizes set to 0.01 (1 L1 regularizer and 2 L2 regularizers).
 
+After running our model for 30 epochs, we got a small accuracy fluctating between 2.5% and 3%.
 
+<img width="517" alt="spatial dropout approach" src="https://user-images.githubusercontent.com/54907300/76157122-ac663700-60d2-11ea-9b7f-4ef61a264b17.png">
 
 # Appraoch 3: 
 
