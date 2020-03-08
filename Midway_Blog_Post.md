@@ -1,5 +1,5 @@
 # Bengali Grapheme Classification: Testing Different Approaches
-### Midway Blog Post  -  Mar. 05, 2020
+### Midway Blog Post  -  Mar. 09, 2020
 
 # Introduction
 For this blog post, we have implemented some changes in preprocessing the data and tried several incremental changes to our baseline neural network architecture. Instead of jumping right into some of the high-grade CNN architectures available online, we wanted to build up a decently performing model from scratch, and then use one or two fancier tricks to improve the accuracy.
@@ -55,7 +55,7 @@ Our initial model had 15 layers (5 Convolution 2D, 3 Dense, 2 Dropout, 1 Flatten
 
 To see if the spatial drop outs and varied regularizers caused the huge decrease in accuracy, we decided to exclude the SpatialDropout2D layers and keep the regularizers consistent (L1). We used 17 layers - 5 Convolution 2D, 3 Dense, 4 Dropouts, 1 Flatten, 4 MaxPooling (we added 2 dropout layers). After running the model for 30 epochs, we surprisingly get the same accuracy and validation accuracy, less than 3%. 
 
-
+<img width="499" alt="spatial dropout approach" src="https://user-images.githubusercontent.com/54907300/76159806-69b85500-60fa-11ea-9386-8836fac8e34e.png">
 
 
 # Next Steps
