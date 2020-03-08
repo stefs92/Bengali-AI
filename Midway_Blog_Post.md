@@ -31,7 +31,7 @@ tf.keras.layers.SpatialDropout2D(
 )
 ```
 
-The "**kwargs" command was giving us
+The "kwargs" command was giving us a hard time and resulting in errors in our code, so we decided to remove the command, and added the spatial dropout command whenever a 
 
 # Appraoch 3: 
 
