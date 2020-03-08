@@ -45,6 +45,7 @@ After running our model for 30 epochs, we got small values for accuracy and vali
 
 <img width="517" alt="spatial dropout approach" src="https://user-images.githubusercontent.com/54907300/76157122-ac663700-60d2-11ea-9b7f-4ef61a264b17.png">
 
+Our initial model (from our initial blog post) had 15 layers (5 Convulution 2D, 3 Dense, 2 Dropout, 1 Flatten, 4 MaxPooling) and a 41% validation accuracy (after running for 50 epochs). However, after adding 8 layers to the new model (6 SpatialDropout2D, 2 Dropout), the model significantly decreases in accuracy (down to less than 3%, after running for 30 epochs). 
 
 Although it's not a professional source, one StackOverFlow user said that the model is not overfitted if the accuracy and validation accuaracy are within the same range <sup>[2]</sup>.
 
