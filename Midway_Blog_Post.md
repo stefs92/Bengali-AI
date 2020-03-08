@@ -31,7 +31,12 @@ tf.keras.layers.SpatialDropout2D(
 )
 ```
 
-The "kwargs" command was giving us a hard time and resulting in errors in our code, so we decided to remove the command, and added the spatial dropout command whenever a 
+The "kwargs" command was giving us a hard time and resulting in errors in our code, so we decided to remove the command, and added the spatial dropout command whenever a Convoultion 2D layer was used:
+
+```
+keras.layers.Conv2D(filters=25, kernel_size=2, activation='relu', padding="SAME",kernel_regularizer=regularizers.l1(0.01)),
+tf.keras.layers.SpatialDropout2D(rate = 0.2, data_format=None),
+```
 
 # Appraoch 3: 
 
