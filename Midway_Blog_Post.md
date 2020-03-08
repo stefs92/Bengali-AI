@@ -31,7 +31,7 @@ tf.keras.layers.SpatialDropout2D(
 )
 ```
 
-The "**kwargs"
+The "**kwargs" command was giving us
 
 # Appraoch 3: 
 
