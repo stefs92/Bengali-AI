@@ -53,16 +53,19 @@ Our initial model had 15 layers (5 Convolution 2D, 3 Dense, 2 Dropout, 1 Flatten
 
 # Appraoch 3: Exclude Spatial Drop Outs, Keep Regularizers Consistent (L1)
 
-To see if the spatial drop outs and varied regularizers caused the huge decrease in accuracy, we decided to exclude the SpatialDropout2D layers and keep the regularizers consistent (L1). We used 17 layers - 5 Convolution 2D, 3 Dense, 4 Dropouts, 1 Flatten, 4 MaxPooling (we added 2 dropout layers). After running the model for 30 epochs, we surprisingly get the same accuracy and validation accuracy, less than 3%. 
+To see if the spatial drop outs and varied regularizers caused the huge decrease in accuracy, we decided to make the neural network a little less dense by excluding the SpatialDropout2D layers and keeping the regularizers consistent (L1). We used 17 layers - 5 Convolution 2D, 3 Dense, 4 Dropouts, 1 Flatten, 4 MaxPooling (we also added 2 dropout layers), keeping all other parameters the same (i.e. filters set to 25). After running the model for 30 epochs, we surprisingly get the same accuracy and validation accuracy, less than 3%. 
 
 <img width="499" alt="spatial dropout approach" src="https://user-images.githubusercontent.com/54907300/76159806-69b85500-60fa-11ea-9386-8836fac8e34e.png">
 
 
 # Next Steps
  
-In the remainder of this project, we will try to experiment with more interesting architectures such as dilated convolutions, and perhaps resnets ...
+Our three approaches show that adding more layers to a neural network does not necesarily improve it, but can rather signifcantly decrease the accuracy. It would be interesting to find a threshold of what number of layers is too dense for the model, for it to perform poorly. 
 
-threshold how deep a nn is
+We're also looking into the possibility of implementing embedded arithmetics (based on lecture on 2/25), to see if the Bengali graphemes can be mapped to a vector, and then broken into three components (roots, vowels, consonants) based on similar vector sequences. 
+
+In the remainder of this project, we will try to experiment with more interesting architectures such as dilated convolutions, and perhaps resnets.
+
 
 # References
 1. tf.keras.layers.SpatialDropout2D | TensorFlow Core v.2
