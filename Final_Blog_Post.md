@@ -51,7 +51,9 @@ In the first two plots on the left, validation accuracy is higher than the train
 
 A simple possible imporovement to explore would be preprocessing the images more efficiently. After cropping the images, we have resized all of them to be of the same shape. One thing we noticed while looking at some of the images was that the aspect ratios of cropped graphemes vary widely, as images range from horizontal to vertical. It would be interesting to explore whether different kinds of cropping/resizing could incresase the accuracy a bit.
 
-When training our model, we would 
+It is also possible that our way of training the model is slightly suboptimal. We would load and train on four parts of the dataset separately until the validation loss would start to increase. Training on each part of the dataset for a single epoch instead could concievably lead to better performance; however, this would take more time since then we would have to load a large file each epoch.
+
+Finally, the model itself is probably where the largest imporvements can be made. If we had 
 
 
 
