@@ -49,9 +49,9 @@ In the first two plots on the left, validation accuracy is higher than the train
 
 # Future Work
 
-One avenue to explore would be preprocessing the images more efficiently. After cropping the images, we have resized all of them to be of the same shape. One thing we noticed while looking at some of the images was that the aspect ratios of cropped graphemes vary widely, as images range from horizontal to vertical. It would be interesting to explore whether different kinds of cropping/resizing could incresase the accuracy a bit.
+A simple possible imporovement to explore would be preprocessing the images more efficiently. After cropping the images, we have resized all of them to be of the same shape. One thing we noticed while looking at some of the images was that the aspect ratios of cropped graphemes vary widely, as images range from horizontal to vertical. It would be interesting to explore whether different kinds of cropping/resizing could incresase the accuracy a bit.
 
-Another 
+When training our model, we would 
 
 
 
