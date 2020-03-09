@@ -53,7 +53,7 @@ A simple possible imporovement to explore would be preprocessing the images more
 
 It is also possible that our way of training the model is slightly suboptimal. We would load and train on four parts of the dataset separately until the validation loss would start to increase. Training on each part of the dataset for a single epoch instead could concievably lead to better performance; however, this would take more time since then we would have to load a large file each epoch.
 
-Finally, the model itself is probably where the largest imporvements can be made. If we had 
+Finally, the model itself is probably where the largest imporvements can be made. Our goal for this project was to try to build a decently performing CNN architecture starting from the simplest starting point and only taking limited 
 
 
 
