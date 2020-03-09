@@ -24,7 +24,7 @@ We have attempted to regularize the model by introducing dropouts after max pool
 
 Here, the x-axis corresponds to the number of epochs trained, the orange plot is the training and blue plot validation accuracy.
 
-For our second approach, we tried to regularize the neural net using SpatialDropouts, a technique that drops 2D Feature maps. Between convolution layers, we added the following,
+For our second approach, we tried to regularize the neural net using SpatialDropouts - a technique that drops 2D Feature maps - while simultaneously adding "l1" and "l2" regularizers to the convolution 2D layers. Between convolution layers, we added the following,
 
 ```
 keras.layers.Conv2D(filters=25, kernel_size=2, activation='relu', padding="SAME",
@@ -32,9 +32,9 @@ keras.layers.Conv2D(filters=25, kernel_size=2, activation='relu', padding="SAME"
 tf.keras.layers.SpatialDropout2D(rate = 0.2, data_format=None),
 ```
 
-For our third approach, we removed dropouts and played with adding L1 and L2 regularizers to convolutional layers. 
+For our third approach, we removed SpatialDropouts and kept the regularizers consistent ("l1"). 
 
-After performing the tuning, both the second and the third approach resulted in slightly lower omptimal accuracy.
+After performing the tuning, both the second and the third approach resulted in slightly lower omptimal accuracy (between 2.5% and 3%).
 
 # Making the Neural Network Deeper
 
