@@ -47,7 +47,9 @@ We used 17 layers - 5 Convolution 2D, 3 Dense, 4 Dropouts, 1 Flatten, 4 MaxPooli
 
 # Next Steps
  
-While we are somewhat satisfied with getting close to 50% accuracy distinguishing between 168 classes of grapheme roots, it is still quite 
+While we are somewhat satisfied with getting close to 50% accuracy while distinguishing between 168 classes of grapheme roots, it is clear that there is further progress to be made. Our simple neural network architecture seems to have reached its limit, when both increasing the number of convolutional filters and increasing the number of layers lead to a decrease in performance. 
+
+For the remainder of this project, we would like to play with adding more layers with "skip connections", as used in the ResNet architecture and described in the previous blog post.
 
 # References
 1. tf.keras.layers.SpatialDropout2D | TensorFlow Core v.2
