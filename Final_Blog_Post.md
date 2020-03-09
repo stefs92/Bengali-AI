@@ -27,7 +27,9 @@ Where the x-axis corresponds to training epochs and two different plots correspo
 
 After training on the grapheme roots, we replaced the last layer of the model with the one appropriate for predicting vowel and consonant diacritics (with 11 and 7 outputs, respectively). Training the neural network on vowel diacritics resulted in the following performance graph, 
 
-
+<p align="center">
+<img width="400" alt="high_level_picture" src="https://user-images.githubusercontent.com/31740043/76188824-806cb380-61af-11ea-9774-82076c202865.PNG">
+</p>
 
 # References
 
