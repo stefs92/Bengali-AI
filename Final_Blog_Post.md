@@ -21,7 +21,9 @@ Since we were loading the data piecewise while training so as not to overload th
 <img width="400" alt="high_level_picture" src="https://user-images.githubusercontent.com/31740043/76186411-9cb92200-61a8-11ea-9681-ce45de4d7569.PNG">
 </p>
 
-Where the x-axis corresponds to training epochs and two different plots correspond to training and validation accuracies. During the majority of the training process, our training accuracy was actually lagging behind the validation accuracy. We believe that this is due to the fact that our model contains dropouts, which are only used for training and not for testing and validation.
+Where the x-axis corresponds to training epochs and two different plots correspond to training and validation accuracies. During the majority of the training process, our training accuracy was actually lagging behind the validation accuracy. We believe that this is due to the fact that our model contains dropouts, which are only used for training and not for testing and validation. Our validation accuracy for grapheme roots ended up hovering around 70%.
+
+
 
 
 # References
