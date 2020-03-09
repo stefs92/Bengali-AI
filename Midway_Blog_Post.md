@@ -46,7 +46,7 @@ After running our model for 30 epochs, we got small values for accuracy and vali
 
 <!-- We used 17 layers - 5 Convolution 2D, 3 Dense, 4 Dropouts, 1 Flatten, 4 MaxPooling (we also added 2 dropout layers), keeping all other parameters the same (i.e. filters set to 25). After running the model for 30 epochs, we surprisingly get the same accuracy and validation accuracy, less than 3%. 
 
-<!-- <img width="499" alt="spatial dropout approach" src="https://user-images.githubusercontent.com/54907300/76159806-69b85500-60fa-11ea-9386-8836fac8e34e.png">
+<!-- <img width="499" alt="spatial dropout approach" src="https://user-images.githubusercontent.com/54907300/76159806-69b85500-60fa-11ea-9386-8836fac8e34e.png"> -->
 
 Since our training and validation accuracy are about the same, the problem is not due to overfitting. It could possibly be due to vanishing gradients.
 
