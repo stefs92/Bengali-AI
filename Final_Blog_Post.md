@@ -62,3 +62,5 @@ Finally, the model itself is probably where the largest imporvements can be made
 [1] Implementation of the Residual Block at https://github.com/relh/keras-residual-unit/blob/master/residual.py
 
 [2] Keras references were consulted extensively and for help locating simple python commands, StackExchange
+
+[3] The inspiration for starting model was taken from Geron's companion notebook
