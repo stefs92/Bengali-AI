@@ -11,6 +11,7 @@ We have previously noticed that our model started to perform significantly worse
 
 The summary of our final model is
 
+![final_model_summary](https://user-images.githubusercontent.com/31740043/76186045-81014c00-61a7-11ea-8a84-ec434d9ccf7a.png)
 
 
 
