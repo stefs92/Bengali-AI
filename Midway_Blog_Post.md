@@ -61,6 +61,6 @@ In the remainder of this project, we will try to experiment with more interestin
 
 # References
 1. tf.keras.layers.SpatialDropout2D | TensorFlow Core v.2
-2. StackOverFlow | https://stackoverflow.com/questions/51335133/keras-how-come-accuracy-is-higher-than-val-acc
+
                 
 
