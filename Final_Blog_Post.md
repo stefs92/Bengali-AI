@@ -7,6 +7,8 @@ Prior to training the final model, we found a bounding box for each image, and t
 
 Since using an instance of ImageDataGenerator class was sometimes causing the session to crash, in our final work we decided to revert back to loading the four cropped image datasets piecewise. We loaded and trained on datasets separately for a number of iterations, with an EarlyStopping callback function. When validation loss on a given part of the dataset would start decreasing, we would switch to another part of the dataset and repeat the process a number of times. We used 5000 images from each of the four sets for validation and the remaining roughly 45000 for training.
 
+# Model
+
 We have previously noticed that our model started to perform significantly worse when additional convolutional layers were added. For our final model, we have attempted to get some additional performance by making our neural network 3 layers deeper while introducing a ResNet - style connection short-circuiting the additional layers. Our implementation of the residual block was inspired by [1] and the example from our last homework, in which we learned how to customize Keras models using a bit of Tensorflow backend. Since our convolutions had stride = 1 and 'same' padding, the dimension of their output was the same as the input dimension (except the first convolution, which introduced a number of filters). This fact made combining the two tensors at the end of the residual block particularly simple.
 
 The summary of our final model is
@@ -44,6 +46,12 @@ Training our model on consonant diacritics instead gave us the accuracy of aroun
 </p>
 
 In the first two plots on the left, validation accuracy is higher than the training accuracy. Then, in the third plot, the training accuracy starts smaller but overtakes the validation accuracy, signaling that some overfitting is starting to take place.
+
+# Future Work
+
+One avenue to explore would be preprocessing the images more efficiently. After cropping the images, we have resized all of them to be of the same shape. One thing we noticed while looking at some of the images was that the aspect ratios of cropped graphemes vary widely, as images range from horizontal to vertical. It would be interesting to explore whether different kinds of cropping/resizing could incresase the accuracy a bit.
+
+Another 
 
 
 
