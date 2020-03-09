@@ -39,6 +39,8 @@ Training our model on consonant diacritics instead gave us the accuracy of aroun
 <img width="400" alt="high_level_picture" src="https://user-images.githubusercontent.com/31740043/76189139-51a30d00-61b0-11ea-9fa7-ab741628c8dd.PNG">
 </p>
 
+In the first two plots on the left, validation accuracy is higher than the training accuracy. Then, in the third plot, the training accuracy starts smaller but overtakes the validation accuracy, signaling that some overfitting is starting to take place.
+
 
 
 # References
