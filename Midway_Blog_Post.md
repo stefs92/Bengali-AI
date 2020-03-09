@@ -47,12 +47,7 @@ We used 17 layers - 5 Convolution 2D, 3 Dense, 4 Dropouts, 1 Flatten, 4 MaxPooli
 
 # Next Steps
  
-Our three approaches show that adding more layers to a neural network does not necesarily improve it, but can rather signifcantly decrease the accuracy. It would be interesting to find a threshold of what number of layers is too dense for the model, for it to perform poorly. 
-
-We're also looking into the possibility of implementing embedded arithmetics (based on lecture on 2/25), to see if the Bengali graphemes can be mapped to a vector, and then broken into three components (roots, vowels, consonants) based on similar vector sequences. 
-
-In the remainder of this project, we will try to experiment with more interesting architectures such as dilated convolutions, and perhaps resnets.
-
+While we are somewhat satisfied with getting close to 50% accuracy distinguishing between 168 classes of grapheme roots, it is still quite 
 
 # References
 1. tf.keras.layers.SpatialDropout2D | TensorFlow Core v.2
