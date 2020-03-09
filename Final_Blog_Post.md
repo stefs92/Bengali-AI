@@ -46,3 +46,5 @@ In the first two plots on the left, validation accuracy is higher than the train
 # References
 
 [1] Implementation of the Residual Block at https://github.com/relh/keras-residual-unit/blob/master/residual.py
+
+[2] Keras references were consulted extensively and for help locating simple python commands, StackExchange
