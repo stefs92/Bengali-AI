@@ -15,7 +15,7 @@ The summary of our final model is
 <img width="400" alt="high_level_picture" src="https://user-images.githubusercontent.com/31740043/76186045-81014c00-61a7-11ea-8a84-ec434d9ccf7a.png">
 </p>
 
-Where all convolutional layers had 20 filters of dimensions 3x3 and relu activations.
+Where all convolutional layers had 20 filters of dimensions 3x3 and relu activations. Prior to writing the midway blog post, we performed extensive tuning of the number of filters; after exploring several different values with our new model, we found that the same values produced the best performance this time as well.
 
 Since we were loading the data piecewise while training so as not to overload the working memory, the performance graphs are pieced together from different training sessions. In order to do so, we used Tensorboard's "Wall" option. The performance of our final model on predicting grapheme roots is shown below,
 
