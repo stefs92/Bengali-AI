@@ -13,6 +13,9 @@ The summary of our final model is
 
 ![final_model_summary](https://user-images.githubusercontent.com/31740043/76186045-81014c00-61a7-11ea-8a84-ec434d9ccf7a.png)
 
+<p align="center">
+<img width="400" alt="high_level_picture" src="https://user-images.githubusercontent.com/31740043/76186045-81014c00-61a7-11ea-8a84-ec434d9ccf7a.png">
+</p>
 
 
 # References
