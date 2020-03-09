@@ -31,6 +31,11 @@ After training on the grapheme roots, we replaced the last layer of the model wi
 <img width="400" alt="high_level_picture" src="https://user-images.githubusercontent.com/31740043/76188824-806cb380-61af-11ea-9774-82076c202865.PNG">
 </p>
 
+where our final validation accuracy ended up being around 90%. Training our model on consonant diacritics instead gave us the accuracy of around 93% and resulted in the following piecewise performance graph,
+
+
+
+
 # References
 
 [1] Implementation of the Residual Block at https://github.com/relh/keras-residual-unit/blob/master/residual.py
