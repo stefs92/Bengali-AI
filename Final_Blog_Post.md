@@ -23,8 +23,7 @@ Since we were loading the data piecewise while training so as not to overload th
 
 Where the x-axis corresponds to training epochs and two different plots correspond to training and validation accuracies. During the majority of the training process, our training accuracy was actually lagging behind the validation accuracy. We believe that this is due to the fact that our model contains dropouts, which are only used for training and not for testing and validation. Our validation accuracy for grapheme roots ended up hovering around 70%.
 
-
-
+After training on the grapheme roots, we trained the same model to predict vowel and consonant ...
 
 # References
 
