@@ -12,7 +12,7 @@ Since finishing our last blog post, we have realized that increasing the number 
 <img width="400" alt="high_level_picture" src="https://user-images.githubusercontent.com/31740043/76132697-35ea0c00-5fe2-11ea-881e-02bda7e403ba.PNG">
 </p>
 
-Here, the model was trained for 50 epochs. The x-axis is labeled according to epochs/50, the orange plot corresponds to the training and blue plot to the validation accuracy.
+Here, the model was trained for 50 epochs. The x-axis is labeled according to epochs/50, the orange plot corresponds to the training and blue plot to the validation accuracy. One counterintuitive aspect of this plot and the following ones is that, in the initial stages of the training, the validation accuracy is actually significantly higher than the training accuracy. We attribute this to using dropouts (here, dropouts are applied only between the final two dense layers), which are applied only during the training and not validation.
 
 # Three Approaches to Regularizing the Model
 
