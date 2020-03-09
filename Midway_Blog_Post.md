@@ -22,6 +22,8 @@ We have attempted to regularize the model by introducing dropouts after max pool
 <img width="400" alt="high_level_picture" src="https://user-images.githubusercontent.com/31740043/76132939-82821700-5fe3-11ea-90cb-9e39500aff20.PNG">
 </p>
 
+Here, the x-axis corresponds to the number of epochs trained, the orange plot is the training and blue plot validation accuracy.
+
 For our second approach, we tried to regularize the neural net using SpatialDropouts, a technique that drops 2D Feature maps. Between convolution layers, we added the following,
 
 ```
