@@ -7,8 +7,12 @@ Prior to training the final model, we found a bounding box for each image, and t
 
 Since using an instance of ImageDataGenerator class was sometimes causing the session to crash, in our final work we decided to revert back to loading the four cropped image datasets piecewise. We loaded and trained on datasets separately for a number of iterations, with an EarlyStopping callback function. When accuracy would start decreasing, we would switch to another image dataset and repeat the process a number of times. 
 
+We have previously noticed that our model started to perform significantly worse when additional convolutional layers were added. For our final model, we have attempted to get some additional performance by making our neural network 3 layers deeper while introducing a ResNet - style connection short-circuiting the additional layers. Our implementation of the residual block was inspired by [1] and the example from our last homework, in which we learned how to customize Keras models using a bit of Tensorflow backend.
 
-We added an implementation of residual block inspired by [1] and the example from one of our homeworks, and made the network 3 layers deeper. This resulted in ...
+The summary of our final model is
+
+
+
 
 # References
 
