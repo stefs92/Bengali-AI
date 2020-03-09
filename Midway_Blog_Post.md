@@ -12,7 +12,7 @@ Since finishing our last blog post, we have realized that increasing the number 
 <img width="400" alt="high_level_picture" src="https://user-images.githubusercontent.com/31740043/76132697-35ea0c00-5fe2-11ea-881e-02bda7e403ba.PNG">
 </p>
 
-# Regularizing the Model
+# Three approaches to regularizing the Model
 
 We have attempted to regularize the model by introducing dropouts after max pooling layers. After adding a dropout of 0.5 after each max pooling layer, the model performed significantly worse, with accuracy hovering around 2.5% after 5 epochs - this value was too high. We tuned both the number of filters and the dropout parameter by training the model for several epochs and choosing the best - performing model, with 20 filters, dropouts of 0.1 after max pooling layers and a dropout of 0.2 between the two dense layers at the very end of the neural network. This gave us the validation accuracy of around 47% and the training is visualized in the Tensorboard's graph below (similar to value accuracy)
 
@@ -28,13 +28,9 @@ keras.layers.Conv2D(filters=25, kernel_size=2, activation='relu', padding="SAME"
 tf.keras.layers.SpatialDropout2D(rate = 0.2, data_format=None),
 ```
 
+For our third approach, we removed dropouts and played with adding L1 and L2 regularizers to convolutional layers. 
 
-
-The validation accuracy (and accuracy) drastically decreased from the 41% validation accuracy our initial model from our initial blog post had, shown below:
-
-<img width="352" alt="initial model" src="https://user-images.githubusercontent.com/54907300/76158482-936a7f80-60ec-11ea-97bf-363855f4539d.png"> 
-
-Our initial model had 15 layers (5 Convolution 2D, 3 Dense, 2 Dropout, 1 Flatten, 4 MaxPooling) and ran for 50 epochs, but adding 8 layers (6 SpatialDropout2D, 2 Dropout) caused the validation accuracy to plummet. Even though the model will perform poorly with this accuracy, at least we know it's not overfitted, since the accuracy and validation accuracy are within the same range (according to a user from StackOverFlow <sup>[2]</sup>).
+After performing the tuning, both the second and the third approach resulted in slightly lower omptimal accuracy.
 
 # Appraoch 3: Exclude Spatial Drop Outs, Keep Regularizers Consistent (L1)
 
