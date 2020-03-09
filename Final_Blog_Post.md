@@ -35,6 +35,9 @@ where our final validation accuracy ended up being around 90%. In this plot, val
 
 Training our model on consonant diacritics instead gave us the accuracy of around 93% and resulted in the following piecewise performance graph,
 
+<p align="center">
+<img width="400" alt="high_level_picture" src="https://user-images.githubusercontent.com/31740043/76189139-51a30d00-61b0-11ea-9fa7-ab741628c8dd.PNG">
+</p>
 
 
 
