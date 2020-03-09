@@ -20,18 +20,7 @@ We have attempted to regularize the model by introducing dropouts after max pool
 <img width="400" alt="high_level_picture" src="https://user-images.githubusercontent.com/31740043/76132939-82821700-5fe3-11ea-90cb-9e39500aff20.PNG">
 </p>
 
-
-# Approach 2: Spatial Dropouts with L1 and L2 Reglarizers
-
-For our second approach, we tried to regularize the neural net using SpatialDropouts, a technique that drops 2D Feature maps. <sup>[1]</sup> The following block of code (from TensorFlow) is the standard of how the technique is implemented <sup>[1]</sup>:
-
-```
-tf.keras.layers.SpatialDropout2D(
-    rate, data_format=None, **kwargs
-)
-```
-
-The "kwargs" command was giving us a hard time and resulting in errors in our code, so we decided to remove the command, and added the spatial dropout command whenever a Convoultion 2D layer was used:
+For our second approach, we tried to regularize the neural net using SpatialDropouts, a technique that drops 2D Feature maps. Between convolution layers, we added the following,
 
 ```
 keras.layers.Conv2D(filters=25, kernel_size=2, activation='relu', padding="SAME",
