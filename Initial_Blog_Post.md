@@ -47,7 +47,7 @@ We believe the more we manually look at the images, the more we can improve our 
 As an initial step, we decided to focus on a simpler problem: to design a Neural Network capable of recognizing the grapheme root. 
 We choose to do so in order to quickly have a working model and begin to assess the difficulties of the task. Recognizing the grapheme root provides the most difficult step since it involves 168 different classes compared to the 7 and 11 of the diacritics components. 
 
-In addition, the model trained in recognizing the grapheme root can then be used to tackle the entire classification problem, for example by adding layers to the network which will be trained to recognise the diacritics.
+In addition, the model trained in recognizing the grapheme root can then be used to tackle the entire classification problem, for example by adding layers to the network which will be trained to recognize the diacritics.
 Having in mind that the diacritics are essentially decorations of the grapheme root, it seems reasonable that an effective neural network should work by first recognizing the root and consequently any extra addition to it. 
 
 
