@@ -47,6 +47,8 @@ Training our model on consonant diacritics instead gave us the accuracy of aroun
 
 In the first two plots on the left, validation accuracy is higher than the training accuracy. Then, in the third plot, the training accuracy starts smaller but overtakes the validation accuracy, signaling that some overfitting is starting to take place.
 
+Our Kaggle submission is available at https://www.kaggle.com/stefanstanojevic/kernel2b55603361?scriptVersionId=30126084, and resulted in a weighted test accuracy of 75.38%.
+
 # Future Work
 
 A simple possible imporovement to explore would be preprocessing the images more efficiently. After cropping the images, we have resized all of them to be of the same shape. One thing we noticed while looking at some of the images was that the aspect ratios of cropped graphemes vary widely, as images range from horizontal to vertical. It would be interesting to explore whether different kinds of cropping/resizing could incresase the accuracy a bit.
